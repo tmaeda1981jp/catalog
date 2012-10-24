@@ -12,7 +12,7 @@ class Product < ActiveRecord::Base
   validates_uniqueness_of :name
   validate :price_must_be_a_multiple_of_hundreds
 
-  scope :recommend, where(recommend, true)
+  scope :recommend, where(recommend: true)
   
   private
   def price_must_be_a_multiple_of_hundreds
