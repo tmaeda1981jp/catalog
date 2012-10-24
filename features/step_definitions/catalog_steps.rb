@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-前提 /^商品管理ページを開いている$/ do
-  visit "/products"
+前提 /^(.*?)ページを開いている$/ do |name|
+  visit name_to_path(name)
 end
 
 前提 /^"(.*?)"リンクをクリックする$/ do |link_text|
@@ -39,11 +39,6 @@ end
   within 'p.price' do
     page.should have_content(product_price)
   end
-end
-
-
-前提 /^店舗管理ページを開いている$/ do
-  visit "/shops"
 end
 
 もし /^以下の内容で店舗データを登録する$/ do |table|
