@@ -20,5 +20,8 @@
     = @product.display_image
     = f.file_field :image
     = f.hidden_field :image_cache
+  .field
+    = f.label :recommend
+    = f.check_box :recommend
   .actions
     = f.submit 'Save'

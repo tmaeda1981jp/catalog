@@ -13,6 +13,9 @@
 %p.image
   %b image:
   = @product.display_image
+%p.recommend
+  %b recommend:
+  = @product.recommend
 
 = link_to 'Edit', edit_product_path(@product)
 \|
