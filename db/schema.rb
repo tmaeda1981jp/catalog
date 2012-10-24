@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(:version => 20121024081511) do
   create_table "products", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.integer  "price"
     t.string   "image"
-    t.boolean  "recommend"
+    t.boolean  "recommend",   :default => false
   end
 
   create_table "shops", :force => true do |t|
