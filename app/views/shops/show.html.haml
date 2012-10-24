@@ -5,13 +5,13 @@
   = @shop.name
 %p
   %b Description:
-  = @shop.description
+  = simple_format(@shop.description)
 %p
   %b Lines summary:
   = @shop.lines_summary
 %p
   %b Image:
-  = @shop.image
+  = image_tag(@shop.image_url) if @shop.image?
 
 = link_to 'Edit', edit_shop_path(@shop)
 \|

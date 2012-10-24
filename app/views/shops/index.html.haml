@@ -13,9 +13,9 @@
   - @shops.each do |shop|
     %tr
       %td= shop.name
-      %td= shop.description
+      %td= simple_format(shop.description)
       %td= shop.lines_summary
-      %td= shop.image
+      %td= image_tag(shop.image_url) if shop.image?
       %td= link_to 'Show', shop
       %td= link_to 'Edit', edit_shop_path(shop)
       %td= link_to 'Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' }
