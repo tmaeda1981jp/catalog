@@ -50,3 +50,5 @@ end
 
 gem 'haml-rails'
 gem 'carrierwave'
+gem 'sass-rails-bootstrap'
+
