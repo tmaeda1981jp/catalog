@@ -5,6 +5,6 @@
  %p
   = product.display_price
  %p
-  = image_tag(product.image_url) if product.image?
+  = product.display_image
  %p
-  = simple_format(product.description)
+  = product.display_description
